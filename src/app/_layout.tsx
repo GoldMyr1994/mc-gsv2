@@ -1,12 +1,10 @@
 import "@/global.css";
-import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
+import { GluestackUIProvider } from "@/gluestack/components/ui/gluestack-ui-provider";
 import { ThemeProvider } from "@react-navigation/native";
-import { config } from "config/gluestack-ui.config";
 import { Slot } from "expo-router";
 import { Provider as ReduxProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
-import { useDeviceColorScheme } from "@/hooks";
 import { bootstrap } from "@/services";
 import { persistor, store } from "@/store";
 import { navigationTheme } from "@/theme";
@@ -17,7 +15,7 @@ import { AuthenticationContextProvider } from "@/context";
 bootstrap();
 
 export default function Layout() {
-  const colorScheme = useDeviceColorScheme();
+  // const colorScheme = useDeviceColorScheme();
 
   // useEffect(function onMount() {
   //   crashlytics().log("mounted");
@@ -34,8 +32,8 @@ export default function Layout() {
       <AuthenticationContextProvider>
         <ReduxProvider store={store}>
           <PersistGate loading={null} persistor={persistor}>
-            <GluestackUIProvider mode="light" colorMode={colorScheme}>
-              <ThemeProvider value={navigationTheme[colorScheme]}>
+            <GluestackUIProvider mode="light">
+              <ThemeProvider value={navigationTheme.light}>
                 <Slot />
               </ThemeProvider>
             </GluestackUIProvider>
