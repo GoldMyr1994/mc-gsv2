@@ -1,0 +1,9 @@
+const QUERY_KEY_TOUR_LIST = "tourList";
+const QUERY_KEY_TOUR_DETAILS = "tourDetails";
+const QUERY_KEY_TOUR_EXACT_LIST = "tourExactList";
+
+export {
+  QUERY_KEY_TOUR_LIST,
+  QUERY_KEY_TOUR_DETAILS,
+  QUERY_KEY_TOUR_EXACT_LIST,
+};

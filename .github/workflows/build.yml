@@ -1,0 +1,71 @@
+name: EAS Build
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Platform: all | ios | android'
+        required: true
+        type: choice
+        options: [all, ios, android]
+      profile:
+        description: 'Profile: internal-development, internal-development-iphone, internal-production, internal-production-iphone, development, production'
+        required: true
+        type: choice
+        options: [internal-development, internal-development-iphone, internal-production, internal-production-iphone, development, production']
+      auto-submit:
+        description: 'Auto submit: false | true'
+        required: true
+        type: choice
+        options: [false, true]
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    name: EAS Build
+    steps:
+      - name: 🏗 Setup repository
+        uses: actions/checkout@v4
+
+      - name: 🏗 corepack enable
+        run: corepack enable
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: yarn
+
+      - name: 🏗 Setup EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 📦 Install dependencies
+        run: rm -rf node_modules && yarn install --immutable
+
+      - name: ℹ️ Expo Env Info
+        run: npx expo-env-info
+
+      - name: 📁 Google Service Files
+        run: |
+          echo "hello" | base64 -di > google-services.json
+
+      # if platform is all, build first ios and then android 
+      # android get queued more that iOS
+      - name: 🚀 Build All
+        if: ${{ github.event.inputs.platform == 'all' }}
+        env: 
+          EXPO_PUBLIC_APP_PROFILE: ${{ github.event.inputs.profile }}
+          EXPO_PUBLIC_API_URL: www.something.smt
+        run: | 
+          eas build --platform=ios --profile=${{ github.event.inputs.profile }} --non-interactive ${{ github.event.inputs.auto-submit == 'true'  && '--auto-submit' || '' }}
+          eas build --platform=android --profile=${{ github.event.inputs.profile }} --non-interactive ${{ github.event.inputs.auto-submit == 'true'  && '--auto-submit' || '' }}
+      
+      - name: 🚀 Build
+        if: ${{ github.event.inputs.platform != 'all' }}
+        env: 
+          EXPO_PUBLIC_APP_PROFILE: ${{ github.event.inputs.profile }}
+          EXPO_PUBLIC_API_URL: www.something.smt
+        run: 
+          eas build --platform=${{ github.event.inputs.platform }} --profile=${{ github.event.inputs.profile }} --non-interactive ${{ github.event.inputs.auto-submit == 'true'  && '--auto-submit' || '' }}

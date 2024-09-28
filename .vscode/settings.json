@@ -1,0 +1,25 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.onIgnoredFiles": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": [
+    "corepack",
+    "firebaseauth",
+    "flatlist",
+    "gluestack",
+    "lucide",
+    "mauroconte",
+    "persistor",
+    "pressable",
+    "reduxjs",
+    "Roboto",
+    "swiper"
+  ],
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}

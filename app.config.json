@@ -1,0 +1,93 @@
+{
+  "expo": {
+    "name": "mc-gsv2-init",
+    "description": "mc-gsv2-init",
+    "slug": "mc-gsv2-init",
+    "platforms": ["ios", "android"],
+    "assetBundlePatterns": ["**/*"],
+    "icon": "./assets/icon.png",
+    "orientation": "portrait",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/roboto/Roboto_100Thin_Italic.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_100Thin.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_300Light_Italic.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_300Light.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_400Regular_Italic.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_400Regular.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_500Medium_Italic.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_500Medium.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_700Bold_Italic.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_700Bold.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_900Black_Italic.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_900Black.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static",
+            "newArchEnabled": false
+          },
+          "android": {
+            "newArchEnabled": false
+          }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "1 Allow $(PRODUCT_NAME) to use your location.",
+          "locationAlwaysPermission": "2 Allow $(PRODUCT_NAME) to use your location.",
+          "isIosBackgroundLocationEnabled": "3 Allow $(PRODUCT_NAME) to use your location.",
+          "isAndroidBackgroundLocationEnabled": "4 Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "experiments": {
+      "tsconfigPaths": true,
+      "typedRoutes": true
+    },
+    "owner": "mauroconte-org",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    }
+  }
+}

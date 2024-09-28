@@ -1,0 +1,46 @@
+name: EAS Update
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - development
+
+jobs: 
+  update:
+    runs-on: ubuntu-latest
+    name: EAS Update
+    steps:
+      - name: 🏗 Setup repository
+        uses: actions/checkout@v4
+
+      - name: 🏗 corepack enable
+        run: corepack enable
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: yarn
+
+      - name: 🏗 Setup EAS
+        uses: expo/expo-github-action@v8
+        with:
+          expo-version: latest
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 📦 Install dependencies
+        run: rm -rf node_modules && yarn install --immutable
+
+      - name: ℹ️ Expo Env Info
+        run: npx expo-env-info
+
+      - name: 🚀 Create update
+        if: github.ref == 'refs/heads/development'
+        env:
+          EXPO_DEBUG: true
+          EXPO_PUBLIC_APP_PROFILE: internal-development
+          EXPO_PUBLIC_API_URL: www.something.smt
+        run: |
+          EXPO_DEBUG=true EXPO_PUBLIC_APP_PROFILE=development eas update --auto --non-interactive
+

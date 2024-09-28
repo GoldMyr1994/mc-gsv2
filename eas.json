@@ -1,0 +1,25 @@
+{
+  "cli": {
+    "version": ">= 10.2.4",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "development": {
+      "channel": "development",
+      "distribution": "store"
+    },
+    "production": {
+      "channel": "production",
+      "distribution": "store"
+    }
+  },
+  "submit": {
+    "development": {
+      "ios": {},
+      "android": {}
+    },
+    "production": {
+      "extends": "development"
+    }
+  }
+}
