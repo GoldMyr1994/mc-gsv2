@@ -2023,6 +2023,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo/html-elements@npm:0.4.2":
+  version: 0.4.2
+  resolution: "@expo/html-elements@npm:0.4.2"
+  checksum: 10c0/c83aef547009da9e6c58da9d43048b295ca4010fb0d055bff1aeb6b7cd1def7f2472319b0566d8b56d92f7d1deb2e547328f64c36bd3cbb8dbd118d9cfd9e006
+  languageName: node
+  linkType: hard
+
 "@expo/html-elements@npm:latest":
   version: 0.10.1
   resolution: "@expo/html-elements@npm:0.10.1"
@@ -2867,7 +2874,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/accordion@npm:1.0.7":
+"@gluestack-ui/accordion@npm:1.0.7, @gluestack-ui/accordion@npm:^1.0.7":
   version: 1.0.7
   resolution: "@gluestack-ui/accordion@npm:1.0.7"
   dependencies:
@@ -2882,7 +2889,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/actionsheet@npm:0.2.45":
+"@gluestack-ui/actionsheet@npm:0.2.45, @gluestack-ui/actionsheet@npm:^0.2.45":
   version: 0.2.45
   resolution: "@gluestack-ui/actionsheet@npm:0.2.45"
   dependencies:
@@ -2900,7 +2907,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/alert-dialog@npm:0.1.30":
+"@gluestack-ui/alert-dialog@npm:0.1.30, @gluestack-ui/alert-dialog@npm:^0.1.30":
   version: 0.1.30
   resolution: "@gluestack-ui/alert-dialog@npm:0.1.30"
   dependencies:
@@ -2917,7 +2924,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/alert@npm:0.1.15":
+"@gluestack-ui/alert@npm:0.1.15, @gluestack-ui/alert@npm:^0.1.15":
   version: 0.1.15
   resolution: "@gluestack-ui/alert@npm:0.1.15"
   peerDependencies:
@@ -2927,7 +2934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/avatar@npm:0.1.17":
+"@gluestack-ui/avatar@npm:0.1.17, @gluestack-ui/avatar@npm:^0.1.17":
   version: 0.1.17
   resolution: "@gluestack-ui/avatar@npm:0.1.17"
   dependencies:
@@ -2939,7 +2946,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/button@npm:1.0.7":
+"@gluestack-ui/button@npm:1.0.7, @gluestack-ui/button@npm:^1.0.7":
   version: 1.0.7
   resolution: "@gluestack-ui/button@npm:1.0.7"
   dependencies:
@@ -2953,7 +2960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/checkbox@npm:0.1.32":
+"@gluestack-ui/checkbox@npm:0.1.32, @gluestack-ui/checkbox@npm:^0.1.32":
   version: 0.1.32
   resolution: "@gluestack-ui/checkbox@npm:0.1.32"
   dependencies:
@@ -2972,7 +2979,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/divider@npm:0.1.9":
+"@gluestack-ui/divider@npm:0.1.9, @gluestack-ui/divider@npm:^0.1.9":
   version: 0.1.9
   resolution: "@gluestack-ui/divider@npm:0.1.9"
   peerDependencies:
@@ -2982,7 +2989,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/fab@npm:0.1.21":
+"@gluestack-ui/fab@npm:0.1.21, @gluestack-ui/fab@npm:^0.1.21":
   version: 0.1.21
   resolution: "@gluestack-ui/fab@npm:0.1.21"
   dependencies:
@@ -3019,7 +3026,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/icon@npm:0.1.22":
+"@gluestack-ui/icon@npm:0.1.22, @gluestack-ui/icon@npm:^0.1.22":
   version: 0.1.22
   resolution: "@gluestack-ui/icon@npm:0.1.22"
   dependencies:
@@ -3033,7 +3040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/image@npm:0.1.10":
+"@gluestack-ui/image@npm:0.1.10, @gluestack-ui/image@npm:^0.1.10":
   version: 0.1.10
   resolution: "@gluestack-ui/image@npm:0.1.10"
   dependencies:
@@ -3047,7 +3054,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/input@npm:0.1.31":
+"@gluestack-ui/input@npm:0.1.31, @gluestack-ui/input@npm:^0.1.31":
   version: 0.1.31
   resolution: "@gluestack-ui/input@npm:0.1.31"
   dependencies:
@@ -3062,7 +3069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/link@npm:0.1.22":
+"@gluestack-ui/link@npm:0.1.22, @gluestack-ui/link@npm:^0.1.22":
   version: 0.1.22
   resolution: "@gluestack-ui/link@npm:0.1.22"
   dependencies:
@@ -3076,7 +3083,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/menu@npm:0.2.36":
+"@gluestack-ui/menu@npm:0.2.36, @gluestack-ui/menu@npm:^0.2.36":
   version: 0.2.36
   resolution: "@gluestack-ui/menu@npm:0.2.36"
   dependencies:
@@ -3098,7 +3105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/modal@npm:0.1.34":
+"@gluestack-ui/modal@npm:0.1.34, @gluestack-ui/modal@npm:^0.1.34":
   version: 0.1.34
   resolution: "@gluestack-ui/modal@npm:0.1.34"
   dependencies:
@@ -3144,7 +3151,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/popover@npm:0.1.37":
+"@gluestack-ui/popover@npm:0.1.37, @gluestack-ui/popover@npm:^0.1.37":
   version: 0.1.37
   resolution: "@gluestack-ui/popover@npm:0.1.37"
   dependencies:
@@ -3162,7 +3169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/pressable@npm:0.1.16":
+"@gluestack-ui/pressable@npm:0.1.16, @gluestack-ui/pressable@npm:^0.1.16":
   version: 0.1.16
   resolution: "@gluestack-ui/pressable@npm:0.1.16"
   dependencies:
@@ -3176,7 +3183,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/progress@npm:0.1.17":
+"@gluestack-ui/progress@npm:0.1.17, @gluestack-ui/progress@npm:^0.1.17":
   version: 0.1.17
   resolution: "@gluestack-ui/progress@npm:0.1.17"
   dependencies:
@@ -3202,7 +3209,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/radio@npm:0.1.33":
+"@gluestack-ui/radio@npm:0.1.33, @gluestack-ui/radio@npm:^0.1.33":
   version: 0.1.33
   resolution: "@gluestack-ui/radio@npm:0.1.33"
   dependencies:
@@ -3232,7 +3239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/select@npm:0.1.29":
+"@gluestack-ui/select@npm:0.1.29, @gluestack-ui/select@npm:^0.1.29":
   version: 0.1.29
   resolution: "@gluestack-ui/select@npm:0.1.29"
   dependencies:
@@ -3247,7 +3254,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/slider@npm:0.1.25":
+"@gluestack-ui/slider@npm:0.1.25, @gluestack-ui/slider@npm:^0.1.25":
   version: 0.1.25
   resolution: "@gluestack-ui/slider@npm:0.1.25"
   dependencies:
@@ -3265,7 +3272,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/spinner@npm:0.1.14":
+"@gluestack-ui/spinner@npm:0.1.14, @gluestack-ui/spinner@npm:^0.1.14":
   version: 0.1.14
   resolution: "@gluestack-ui/spinner@npm:0.1.14"
   peerDependencies:
@@ -3275,7 +3282,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/switch@npm:0.1.22":
+"@gluestack-ui/switch@npm:0.1.22, @gluestack-ui/switch@npm:^0.1.22":
   version: 0.1.22
   resolution: "@gluestack-ui/switch@npm:0.1.22"
   dependencies:
@@ -3305,7 +3312,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/textarea@npm:0.1.23":
+"@gluestack-ui/textarea@npm:0.1.23, @gluestack-ui/textarea@npm:^0.1.23":
   version: 0.1.23
   resolution: "@gluestack-ui/textarea@npm:0.1.23"
   dependencies:
@@ -3385,7 +3392,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gluestack-ui/tooltip@npm:0.1.33":
+"@gluestack-ui/tooltip@npm:0.1.33, @gluestack-ui/tooltip@npm:^0.1.33":
   version: 0.1.33
   resolution: "@gluestack-ui/tooltip@npm:0.1.33"
   dependencies:
@@ -3801,7 +3808,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@legendapp/motion@npm:latest":
+"@legendapp/motion@npm:^2.4.0, @legendapp/motion@npm:latest":
   version: 2.4.0
   resolution: "@legendapp/motion@npm:2.4.0"
   dependencies:
@@ -12484,14 +12491,42 @@ __metadata:
     "@babel/core": "npm:^7.25.2"
     "@expo-google-fonts/roboto": "npm:^0.2.3"
     "@expo/config-plugins": "npm:~8.0.0"
+    "@expo/html-elements": "npm:0.4.2"
     "@expo/prebuild-config": "npm:~7.0.0"
     "@gluestack-style/react": "npm:^1.0.57"
+    "@gluestack-ui/accordion": "npm:^1.0.7"
+    "@gluestack-ui/actionsheet": "npm:^0.2.45"
+    "@gluestack-ui/alert": "npm:^0.1.15"
+    "@gluestack-ui/alert-dialog": "npm:^0.1.30"
+    "@gluestack-ui/avatar": "npm:^0.1.17"
+    "@gluestack-ui/button": "npm:^1.0.7"
+    "@gluestack-ui/checkbox": "npm:^0.1.32"
+    "@gluestack-ui/divider": "npm:^0.1.9"
+    "@gluestack-ui/fab": "npm:^0.1.21"
+    "@gluestack-ui/form-control": "npm:^0.1.18"
+    "@gluestack-ui/icon": "npm:^0.1.22"
+    "@gluestack-ui/image": "npm:^0.1.10"
+    "@gluestack-ui/input": "npm:^0.1.31"
+    "@gluestack-ui/link": "npm:^0.1.22"
+    "@gluestack-ui/menu": "npm:^0.2.36"
+    "@gluestack-ui/modal": "npm:^0.1.34"
     "@gluestack-ui/nativewind-utils": "npm:^1.0.24"
     "@gluestack-ui/overlay": "npm:^0.1.15"
+    "@gluestack-ui/popover": "npm:^0.1.37"
+    "@gluestack-ui/pressable": "npm:^0.1.16"
+    "@gluestack-ui/progress": "npm:^0.1.17"
+    "@gluestack-ui/radio": "npm:^0.1.33"
+    "@gluestack-ui/select": "npm:^0.1.29"
+    "@gluestack-ui/slider": "npm:^0.1.25"
+    "@gluestack-ui/spinner": "npm:^0.1.14"
+    "@gluestack-ui/switch": "npm:^0.1.22"
+    "@gluestack-ui/textarea": "npm:^0.1.23"
     "@gluestack-ui/themed": "npm:^1.1.53"
     "@gluestack-ui/toast": "npm:^1.0.7"
+    "@gluestack-ui/tooltip": "npm:^0.1.33"
     "@googlemaps/google-maps-services-js": "npm:^3.4.0"
     "@googlemaps/polyline-codec": "npm:^1.0.28"
+    "@legendapp/motion": "npm:^2.4.0"
     "@react-native-async-storage/async-storage": "npm:1.23.1"
     "@react-native-firebase/analytics": "npm:^20.4.0"
     "@react-native-firebase/app": "npm:^20.4.0"
