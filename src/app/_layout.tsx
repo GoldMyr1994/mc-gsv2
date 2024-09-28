@@ -1,4 +1,5 @@
-import { GluestackUIProvider } from "@gluestack-ui/themed";
+import "@/global.css";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import { ThemeProvider } from "@react-navigation/native";
 import { config } from "config/gluestack-ui.config";
 import { Slot } from "expo-router";
@@ -33,7 +34,7 @@ export default function Layout() {
       <AuthenticationContextProvider>
         <ReduxProvider store={store}>
           <PersistGate loading={null} persistor={persistor}>
-            <GluestackUIProvider config={config} colorMode={colorScheme}>
+            <GluestackUIProvider mode="light" colorMode={colorScheme}>
               <ThemeProvider value={navigationTheme[colorScheme]}>
                 <Slot />
               </ThemeProvider>
