@@ -1,4 +1,4 @@
-import { Button, ButtonIcon } from "@gluestack-ui/themed";
+import { Button, ButtonIcon } from "@/gluestack/components/ui/button";
 import { DrawerNavigationProp } from "@react-navigation/drawer";
 import { ParamListBase } from "@react-navigation/native";
 import { useNavigation, usePathname } from "expo-router";
@@ -39,14 +39,14 @@ function DrawerHeaderLeft() {
 
   if (actionType === "pop") {
     return (
-      <Button onPress={onAction} borderWidth="$0" isDisabled={!onAction}>
+      <Button onPress={onAction} isDisabled={!onAction} className="border-0">
         <ButtonIcon as={ChevronLeftIcon} />
       </Button>
     );
   }
 
   return (
-    <Button onPress={onAction} borderWidth="$0" isDisabled={!onAction}>
+    <Button onPress={onAction} isDisabled={!onAction} className="border-0">
       <ButtonIcon as={Menu} />
     </Button>
   );

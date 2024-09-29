@@ -1,4 +1,6 @@
-import { Text, Center, Spinner } from "@gluestack-ui/themed";
+import { Spinner } from "@/gluestack/components/ui/spinner";
+import { Center } from "@/gluestack/components/ui/center";
+import { Text } from "@/gluestack/components/ui/text";
 import { Redirect, router, SplashScreen } from "expo-router";
 
 import { OptimizedScreen } from "@/components";
@@ -20,8 +22,8 @@ export default function IndexScreen() {
   if (isLoading) {
     return (
       <OptimizedScreen>
-        <Center flex={1}>
-          <Text display="none">app/index.tsx</Text>
+        <Center className="flex-1">
+          <Text className="hidden">app/index.tsx</Text>
           <Spinner size="large" animating />
         </Center>
       </OptimizedScreen>

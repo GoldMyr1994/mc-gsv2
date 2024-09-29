@@ -1,14 +1,12 @@
+import { Input, InputField } from "@/gluestack/components/ui/input";
+import { Heading } from "@/gluestack/components/ui/heading";
 import {
-  Button,
-  ButtonText,
-  Center,
   FormControl,
   FormControlLabel,
   FormControlLabelText,
-  Heading,
-  Input,
-  InputField,
-} from "@gluestack-ui/themed";
+} from "@/gluestack/components/ui/form-control";
+import { Center } from "@/gluestack/components/ui/center";
+import { Button, ButtonText } from "@/gluestack/components/ui/button";
 import { useState } from "react";
 
 function CameraQrCodeScannerSimulator() {
@@ -19,8 +17,8 @@ function CameraQrCodeScannerSimulator() {
   }
 
   return (
-    <Center flex={1}>
-      <Center gap="$4">
+    <Center className="flex-1">
+      <Center className="gap-4">
         <Heading>expo-camera</Heading>
         <Heading size="md">not supported in simulator/emulator</Heading>
         <FormControl>

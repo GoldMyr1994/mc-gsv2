@@ -1,12 +1,8 @@
-import {
-  Avatar,
-  AvatarFallbackText,
-  Text,
-  HStack,
-  VStack,
-  ButtonText,
-  Button,
-} from "@gluestack-ui/themed";
+import { ButtonText, Button } from "@/gluestack/components/ui/button";
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { HStack } from "@/gluestack/components/ui/hstack";
+import { Text } from "@/gluestack/components/ui/text";
+import { Avatar, AvatarFallbackText } from "@/gluestack/components/ui/avatar";
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
@@ -22,7 +18,7 @@ function DrawerContent(props: DrawerContentComponentProps) {
 
   return (
     <DrawerContentScrollView {...props} stickyHeaderIndices={[0]}>
-      <HStack p="$4" alignItems="center" space="lg">
+      <HStack space="lg" className="p-4 items-center">
         <Avatar>
           <AvatarFallbackText>mauro conte</AvatarFallbackText>
         </Avatar>
@@ -32,7 +28,7 @@ function DrawerContent(props: DrawerContentComponentProps) {
         </VStack>
       </HStack>
       <DrawerItemList {...props} />
-      <Button onPress={handleLogout} mx="$4">
+      <Button onPress={handleLogout} className="mx-4">
         <ButtonText>ESCI</ButtonText>
       </Button>
     </DrawerContentScrollView>

@@ -1,13 +1,10 @@
-import {
-  Button,
-  ButtonIcon,
-  Divider,
-  Heading,
-  Text,
-  VStack,
-  HStack,
-  Spinner,
-} from "@gluestack-ui/themed";
+import { Spinner } from "@/gluestack/components/ui/spinner";
+import { HStack } from "@/gluestack/components/ui/hstack";
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { Text } from "@/gluestack/components/ui/text";
+import { Heading } from "@/gluestack/components/ui/heading";
+import { Divider } from "@/gluestack/components/ui/divider";
+import { Button, ButtonIcon } from "@/gluestack/components/ui/button";
 import { useForegroundPermissions } from "expo-location";
 import { router } from "expo-router";
 import { Settings } from "lucide-react-native";
@@ -47,11 +44,11 @@ function ScreenRequestPermissions() {
   }, [foregroundPermissions?.granted]);
 
   return (
-    <VStack style={{ top: insets.top }} px="$4" space="sm">
+    <VStack style={{ top: insets.top }} space="sm" className="px-4">
       <Heading>PERMESSI POSIZIONE</Heading>
       <Divider />
       <VStack space="sm">
-        <HStack space="sm" alignItems="center" justifyContent="space-between">
+        <HStack space="sm" className="items-center justify-between">
           <Heading size="md">FOREGROUND</Heading>
           {foregroundPermissions === null && <Spinner animating />}
         </HStack>
@@ -60,7 +57,7 @@ function ScreenRequestPermissions() {
         </Text>
       </VStack>
       {!!foregroundPermissions && (
-        <HStack alignItems="center" justifyContent="space-between" space="md">
+        <HStack space="md" className="items-center justify-between">
           <VStack>
             {Object.entries(foregroundPermissions).map(([k, v]) => (
               <Heading key={k} size="xs">

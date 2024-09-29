@@ -1,12 +1,12 @@
+import { Text } from "@/gluestack/components/ui/text";
 import {
-  VStack,
-  HStack,
   Slider,
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-  Text,
-} from "@gluestack-ui/themed";
+} from "@/gluestack/components/ui/slider";
+import { HStack } from "@/gluestack/components/ui/hstack";
+import { VStack } from "@/gluestack/components/ui/vstack";
 
 import { actions, selectors, useAppDispatch, useAppSelector } from "@/store";
 import { useGetDeviceLocation, useMapViewRef } from "@/hooks";
@@ -96,7 +96,7 @@ function SettingsInitialMapZoom() {
   }
 
   return (
-    <VStack space="lg" flex={1}>
+    <VStack space="lg" className="flex-1">
       <HStack space="lg">
         <Slider
           minValue={15}
@@ -108,7 +108,7 @@ function SettingsInitialMapZoom() {
           isDisabled={!userId}
           isReversed={false}
           onChange={handleChangeInitialZoom}
-          flex={1}
+          className="flex-1"
         >
           <SliderTrack>
             <SliderFilledTrack />
@@ -117,7 +117,7 @@ function SettingsInitialMapZoom() {
         </Slider>
         <Text>{initialZoom}</Text>
       </HStack>
-      <VStack flex={1}>
+      <VStack className="flex-1">
         <MapView
           onMapReady={onMapReady}
           ref={onMapViewRef}

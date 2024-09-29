@@ -34,7 +34,7 @@ function useWatchLocation() {
           {
             accuracy: Accuracy.BestForNavigation,
           },
-          subscriptionHandler,
+          subscriptionHandler
         );
       }
       try {
@@ -46,7 +46,7 @@ function useWatchLocation() {
         subscription?.remove();
       };
     },
-    [dispatch],
+    [dispatch]
   );
 }
 

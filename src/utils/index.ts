@@ -8,7 +8,7 @@ export * from "./distance";
 
 function pickErrorMessageFromUnknown(
   o: unknown,
-  defaultValue = "Something went wrong",
+  defaultValue = "Something went wrong"
 ): string {
   let errorMessage = defaultValue;
   if (

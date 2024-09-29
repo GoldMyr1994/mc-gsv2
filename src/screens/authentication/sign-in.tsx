@@ -1,20 +1,21 @@
 import {
-  Button,
-  ButtonIcon,
-  ButtonText,
-  Input,
-  InputField,
-  KeyboardAvoidingView,
-  InputSlot,
-  Spinner,
-  Center,
-  VStack,
   FormControl,
   FormControlLabel,
   FormControlLabelText,
   FormControlErrorText,
   FormControlError,
-} from "@gluestack-ui/themed";
+} from "@/gluestack/components/ui/form-control";
+
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { Center } from "@/gluestack/components/ui/center";
+import { Spinner } from "@/gluestack/components/ui/spinner";
+import { KeyboardAvoidingView } from "@/gluestack/components/ui/keyboard-avoiding-view";
+import { Input, InputField, InputSlot } from "@/gluestack/components/ui/input";
+import {
+  Button,
+  ButtonIcon,
+  ButtonText,
+} from "@/gluestack/components/ui/button";
 import { router } from "expo-router";
 import { Mail } from "lucide-react-native";
 import { useCallback, useState } from "react";
@@ -56,15 +57,19 @@ function ScreenSignIn() {
   };
 
   return (
-    <KeyboardAvoidingView flex={1} justifyContent="center">
-      <VStack space="lg" px="$8" justifyContent="center">
-        <FormControl isInvalid={!!error} isDisabled={isFreeze} gap="$2">
+    <KeyboardAvoidingView className="flex-1 justify-center">
+      <VStack space="lg" className="px-8 justify-center">
+        <FormControl
+          isInvalid={!!error}
+          isDisabled={isFreeze}
+          className="gap-2"
+        >
           <FormControlLabel>
             <FormControlLabelText>Enter your phone number</FormControlLabelText>
           </FormControlLabel>
           <Input isDisabled={isFreeze}>
             <InputSlot>
-              <Button disabled gap="$2" borderWidth="$0" pl="$2" pr="$0">
+              <Button disabled className="gap-2 border-0 pl-2 pr-0">
                 <FlagIcon name="it" />
                 <ButtonText>{prefix}</ButtonText>
               </Button>
@@ -87,13 +92,7 @@ function ScreenSignIn() {
         </Button>
       </VStack>
       {isFreeze && (
-        <Center
-          position="absolute"
-          w="$full"
-          h="$full"
-          opacity={0.2}
-          bg="$black"
-        >
+        <Center className="absolute w-full h-full opacity-20 bg-black">
           <Spinner size="large" animating={isFreeze} />
         </Center>
       )}

@@ -1,4 +1,4 @@
-import { Divider } from "@gluestack-ui/themed";
+import { Divider } from "@/gluestack/components/ui/divider";
 import { FlatList } from "react-native";
 
 import { PointOfInterestListItem } from "./point-of-interest-list-item";

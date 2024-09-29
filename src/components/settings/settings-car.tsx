@@ -1,14 +1,14 @@
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { Text } from "@/gluestack/components/ui/text";
 import {
-  CircleIcon,
-  HStack,
-  Heading,
   Radio,
   RadioGroup,
   RadioIcon,
   RadioIndicator,
-  Text,
-  VStack,
-} from "@gluestack-ui/themed";
+} from "@/gluestack/components/ui/radio";
+import { Heading } from "@/gluestack/components/ui/heading";
+import { HStack } from "@/gluestack/components/ui/hstack";
+import { CircleIcon } from "@/gluestack/components/ui/icon";
 import { Image } from "expo-image";
 import React, { useCallback } from "react";
 
@@ -53,17 +53,14 @@ function SettingsCar() {
       </HStack>
       <RadioGroup
         value={selectedCarIcon}
-        flexDirection="row"
-        flexWrap="wrap"
-        gap="$4"
-        justifyContent="space-around"
         onChange={handleChange}
+        className="flex-row flex-wrap gap-4 justify-around"
       >
         {Object.entries(ASSETS.car).map(([assetKey, asset]) => (
           <VStack key={assetKey}>
             <Text isTruncated>{assetKey}</Text>
-            <Radio flex={1} value={assetKey} size="md">
-              <RadioIndicator mr="$2">
+            <Radio value={assetKey} size="md" className="flex-1">
+              <RadioIndicator className="mr-2">
                 <RadioIcon as={CircleIcon} />
               </RadioIndicator>
               <Image source={asset} style={{ width: 100, height: 100 }} />
