@@ -4,7 +4,7 @@ function isNoticeableDistance<T = unknown>(
   options: { headingThreshold: number; locationThreshold: number } = {
     headingThreshold: 2,
     locationThreshold: 2,
-  },
+  }
 ) {
   return 0;
 }

@@ -1,4 +1,4 @@
-import { VStack } from "@gluestack-ui/themed";
+import { VStack } from "@/gluestack/components/ui/vstack";
 
 // TODO: better type
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 function PointOfInterestSwiperItem(props: Props) {
   console.log("INFO: PointOfInterestSwiperItem props", { props });
   return (
-    <VStack flex={1}>
+    <VStack className="flex-1">
       {/* <Image
         onError={(e) => {
           console.error(e);

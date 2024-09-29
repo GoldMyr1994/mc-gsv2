@@ -1,4 +1,7 @@
-import { HStack, Heading, Icon, Pressable } from "@gluestack-ui/themed";
+import { Pressable } from "@/gluestack/components/ui/pressable";
+import { Icon } from "@/gluestack/components/ui/icon";
+import { Heading } from "@/gluestack/components/ui/heading";
+import { HStack } from "@/gluestack/components/ui/hstack";
 import { router } from "expo-router";
 import { ChevronRight } from "lucide-react-native";
 
@@ -11,7 +14,7 @@ function PointOfInterestListItem({ item }: { item: PointOfInterest }) {
         router.push(`/point-of-interest/${item.id}`);
       }}
     >
-      <HStack justifyContent="space-between" alignItems="center" gap="$4">
+      <HStack className="justify-between items-center gap-4">
         <Heading>{item.name}</Heading>
         <Icon as={ChevronRight} />
       </HStack>

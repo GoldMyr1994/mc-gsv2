@@ -1,4 +1,4 @@
-import { useColorMode } from "@gluestack-ui/themed";
+import { useColorMode } from "@gluestack-style/react";
 
 function useAppColorMode() {
   const colorMode = useColorMode();

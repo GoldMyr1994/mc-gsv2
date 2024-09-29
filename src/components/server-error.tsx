@@ -1,16 +1,13 @@
-import {
-  Button,
-  ButtonIcon,
-  Heading,
-  Center,
-  VStack,
-} from "@gluestack-ui/themed";
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { Center } from "@/gluestack/components/ui/center";
+import { Heading } from "@/gluestack/components/ui/heading";
+import { Button, ButtonIcon } from "@/gluestack/components/ui/button";
 import { RefreshCw, XCircle } from "lucide-react-native";
 
 function ServerError({ refresh }: { refresh?: () => void }) {
   return (
-    <Center flex={1}>
-      <VStack gap="$4">
+    <Center className="flex-1">
+      <VStack className="gap-4">
         <Button>
           <ButtonIcon as={XCircle} />
         </Button>

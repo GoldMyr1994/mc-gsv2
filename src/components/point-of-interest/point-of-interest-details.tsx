@@ -1,4 +1,5 @@
-import { Text, VStack } from "@gluestack-ui/themed";
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { Text } from "@/gluestack/components/ui/text";
 
 import { PointOfInterestSwiper } from "./point-of-interest-swiper";
 

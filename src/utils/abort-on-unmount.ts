@@ -4,7 +4,7 @@ async function abortOnUnmount<T>(
   mock?: {
     condition: boolean;
     returnValue: T;
-  },
+  }
 ): Promise<T> {
   const p = new Promise<T>((resolve, reject) => {
     if (mock?.condition) {

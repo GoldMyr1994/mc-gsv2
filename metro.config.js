@@ -1,6 +1,4 @@
-const {
-  withNativeWind: withNativeWind
-} = require("nativewind/metro");
+const { withNativeWind: withNativeWind } = require("nativewind/metro");
 
 /* eslint-env node */
 require("ts-node/register");

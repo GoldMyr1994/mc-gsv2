@@ -1,11 +1,11 @@
+import { Text } from "@/gluestack/components/ui/text";
+import { Heading } from "@/gluestack/components/ui/heading";
+import { Center } from "@/gluestack/components/ui/center";
 import {
   Button,
   ButtonIcon,
   ButtonText,
-  Center,
-  Heading,
-  Text,
-} from "@gluestack-ui/themed";
+} from "@/gluestack/components/ui/button";
 import { PermissionStatus, useCameraPermissions } from "expo-camera";
 import * as Linking from "expo-linking";
 import { router } from "expo-router";
@@ -55,8 +55,8 @@ function CameraPermissions() {
   };
 
   return (
-    <Center flex={1} gap="$6">
-      <Center gap="$1">
+    <Center className="flex-1 gap-6">
+      <Center className="gap-1">
         <Heading>
           {status?.status === PermissionStatus.UNDETERMINED
             ? "Requesting camera permission"
@@ -64,7 +64,7 @@ function CameraPermissions() {
         </Heading>
         <Text>Grant access to camera in system settings</Text>
       </Center>
-      <Button onPress={openSystemSettings} gap="$2" size="xl">
+      <Button onPress={openSystemSettings} size="xl" className="gap-2">
         <ButtonIcon as={SettingsIcon} />
         <ButtonText>System Settings</ButtonText>
       </Button>

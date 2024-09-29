@@ -46,3 +46,6 @@ babel.config.js
 metro.config.js
 tsconfig.json
 .eslintrc.js
+
+
+src/gluestack/

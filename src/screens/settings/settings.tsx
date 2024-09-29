@@ -1,4 +1,5 @@
-import { Divider, VStack } from "@gluestack-ui/themed";
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { Divider } from "@/gluestack/components/ui/divider";
 
 import { ScrollView } from "react-native";
 
@@ -13,7 +14,7 @@ function ScreenSettings() {
 
   return (
     <ScrollView>
-      <VStack flex={1} p="$4" gap="$4">
+      <VStack className="flex-1 p-4 gap-4">
         <SettingsAccount user={user} handleLogout={handleLogout} />
         <Divider />
         <SettingsCar />

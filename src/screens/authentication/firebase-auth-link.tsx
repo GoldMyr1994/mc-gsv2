@@ -1,18 +1,17 @@
 import {
-  Button,
-  ButtonIcon,
-  Input,
-  InputField,
-  VStack,
-  Center,
-  Spinner,
-  KeyboardAvoidingView,
   FormControl,
   FormControlLabel,
   FormControlLabelText,
   FormControlErrorText,
   FormControlError,
-} from "@gluestack-ui/themed";
+} from "@/gluestack/components/ui/form-control";
+
+import { KeyboardAvoidingView } from "@/gluestack/components/ui/keyboard-avoiding-view";
+import { Spinner } from "@/gluestack/components/ui/spinner";
+import { Center } from "@/gluestack/components/ui/center";
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { Input, InputField } from "@/gluestack/components/ui/input";
+import { Button, ButtonIcon } from "@/gluestack/components/ui/button";
 import { router } from "expo-router";
 import { SendHorizontal } from "lucide-react-native";
 import { useCallback, useState } from "react";
@@ -54,9 +53,13 @@ function ScreenFirebaseAuthLink() {
   };
 
   return (
-    <KeyboardAvoidingView flex={1} justifyContent="center">
-      <VStack space="lg" px="$8">
-        <FormControl isInvalid={!!error} isDisabled={isFreeze} gap="$2">
+    <KeyboardAvoidingView className="flex-1 justify-center">
+      <VStack space="lg" className="px-8">
+        <FormControl
+          isInvalid={!!error}
+          isDisabled={isFreeze}
+          className="gap-2"
+        >
           <FormControlLabel>
             <FormControlLabelText>
               Enter the OTP code sent to your phone
@@ -81,13 +84,7 @@ function ScreenFirebaseAuthLink() {
         </Button>
       </VStack>
       {isFreeze && (
-        <Center
-          position="absolute"
-          w="$full"
-          h="$full"
-          opacity={0.2}
-          bg="$black"
-        >
+        <Center className="absolute w-full h-full opacity-20 bg-black">
           <Spinner size="large" animating={isFreeze} />
         </Center>
       )}

@@ -1,12 +1,14 @@
-import { Center, Spinner, VStack } from "@gluestack-ui/themed";
-import { ComponentProps, ReactNode, useMemo } from "react";
+import { VStack } from "@/gluestack/components/ui/vstack";
+import { Spinner } from "@/gluestack/components/ui/spinner";
+import { Center } from "@/gluestack/components/ui/center";
+import { ReactNode, useMemo } from "react";
 
 interface Props {
   size?: "large" | "small";
   animating?: boolean;
   children?: ReactNode;
   childrenPlacement?: "top" | "bottom";
-  gap?: ComponentProps<typeof VStack>["gap"];
+  gap?: number;
   absolute?: boolean;
 }
 
@@ -15,7 +17,7 @@ function ScreenLoading({
   animating = true,
   children = null,
   childrenPlacement = "bottom",
-  gap = "$4",
+  gap = 4,
   absolute = false,
 }: Props) {
   const absoluteStyle = useMemo(() => {
@@ -31,8 +33,8 @@ function ScreenLoading({
   }, [absolute]);
 
   return (
-    <Center flex={1} {...absoluteStyle}>
-      <VStack gap={gap}>
+    <Center {...absoluteStyle} className="flex-1">
+      <VStack className={` gap-${String(gap)} `}>
         {childrenPlacement === "top" && children}
         <Spinner animating={animating} size={size} />
         {childrenPlacement === "bottom" && children}

@@ -1,4 +1,7 @@
-import { Center, Heading, Icon, Spinner } from "@gluestack-ui/themed";
+import { Spinner } from "@/gluestack/components/ui/spinner";
+import { Icon } from "@/gluestack/components/ui/icon";
+import { Heading } from "@/gluestack/components/ui/heading";
+import { Center } from "@/gluestack/components/ui/center";
 import { CameraView, BarcodeScanningResult } from "expo-camera";
 import { CameraIcon } from "lucide-react-native";
 import { useState } from "react";
@@ -25,8 +28,8 @@ function CameraQrCodeScanner({ onQrCodeScanned }: Props) {
   };
 
   return (
-    <Center flex={1}>
-      <Center gap="$4">
+    <Center className="flex-1">
+      <Center className="gap-4">
         <Heading>Loading Camera</Heading>
         <Icon as={CameraIcon} size="xl" />
       </Center>

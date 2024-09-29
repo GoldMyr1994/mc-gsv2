@@ -1,7 +1,7 @@
+import { HStack } from "@/gluestack/components/ui/hstack";
 import { OptimizedScreen } from "@/components";
 import { useLocationPermission } from "@/hooks";
 import { ScreenSettingsInitialMapZoom } from "@/screens";
-import { HStack } from "@gluestack-ui/themed";
 import { ActivityIndicator } from "react-native";
 
 export default function ScreenSettingsWrapper() {
@@ -12,7 +12,7 @@ export default function ScreenSettingsWrapper() {
       {isGranted ? (
         <ScreenSettingsInitialMapZoom />
       ) : (
-        <HStack flex={1} justifyContent="center" alignItems="center">
+        <HStack className="flex-1 justify-center items-center">
           <ActivityIndicator size="large" animating />
         </HStack>
       )}

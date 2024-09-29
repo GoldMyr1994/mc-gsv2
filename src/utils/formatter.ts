@@ -29,7 +29,9 @@ class SpeedFormatter {
 
 class LatLngFormatter {
   format(ll: LatLng, fractionDigits = 4) {
-    return `${ll.latitude.toFixed(fractionDigits)}, ${ll.longitude.toFixed(fractionDigits)}`;
+    return `${ll.latitude.toFixed(fractionDigits)}, ${ll.longitude.toFixed(
+      fractionDigits
+    )}`;
   }
 }
 
